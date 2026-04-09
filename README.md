@@ -1,65 +1,46 @@
-# My Portfolio Website - Overview 🚀
+# Sagar Kamboj | AI/ML Developer & Full Stack Portfolio 🚀
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
-
----
-
-## ⚠️ Usage Notice
-
-This project is shared for learning purposes only.
-
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.
-
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
+Welcome to my personal portfolio! This website showcases my journey as a developer, featuring high-fidelity animations, real-time communication tools, and AI-powered applications.
 
 ---
 
-## 🛠️ Instructions
+## 👨‍💻 About Me
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
-
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
+I am a passionate **AI/ML Developer** focused on creating immersive digital experiences. My work combines cutting-edge machine learning and predictive analytics with high-performance, modern frontend design.
 
 ---
 
 ## ⚙️ Tech Stack
 
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
+- **Frontend**: React, TypeScript, GSAP, CSS3
+- **3D & Graphics**: Three.js, WebGL, GLSL
+- **Backend**: Node.js, Express.js, WebSockets (Socket.io)
+- **Database**: MongoDB, MySQL
+- **AI/ML**: Python, Gemini API, AI-powered automation
 
 ---
 
-## 🎨 Assets Usage
+## 🌟 Featured Projects
 
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
+- **Student GPT**: An advanced AI-powered assistant for students featuring secure authentication and real-time response generation.
+- **Talkify**: A hyper-modern real-time chat application built with WebSockets, featuring a seamless glassmorphism UI.
 
 ---
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+## 🛠️ Performance & Design
+
+- **Smooth Scrolling**: Powered by GSAP ScrollSmoother for a premium navigation experience.
+- **Micro-animations**: Hand-crafted interactions using GSAP for a responsive and "alive" interface.
+- **Real-time Interaction**: Integrated 3D models with mouse-tracking and physics.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
+Created by **Sagar Kamboj**. This project is built for personal showcase and professional demonstration.
 
-See the LICENSE file for full details
+---
 
+<p align="center">
+  Built with ❤️ by Sagar Kamboj
+</p>
