@@ -1,0 +1,93 @@
+import "./styles/Work.css";
+import WorkImage from "./WorkImage";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+// Import images correctly
+import studentgpt from "../assets/images/studentgpt.png";
+import talkify from "../assets/images/talkify.png";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+const Work = () => {
+  useGSAP(() => {
+    let translateX: number = 0;
+
+    function setTranslateX() {
+      const box = document.getElementsByClassName("work-box");
+      if (box.length === 0) return;
+      const rectLeft = document.querySelector(".work-container")!.getBoundingClientRect().left;
+      const rect = box[0].getBoundingClientRect();
+      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
+      let padding: number = parseInt(window.getComputedStyle(box[0]).padding) / 2;
+      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+    }
+
+    setTranslateX();
+
+    let timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".work-section",
+        start: "top top",
+        end: `+=${translateX}`, 
+        scrub: true,
+        pin: true,
+        id: "work",
+      },
+    });
+
+    timeline.to(".work-flex", {
+      x: -translateX,
+      ease: "none",
+    });
+
+    return () => {
+      timeline.kill();
+      ScrollTrigger.getById("work")?.kill();
+    };
+  }, []);
+
+  return (
+    <div className="work-section" id="work">
+      <div className="work-container section-container">
+        <h2>
+          My <span>Work</span>
+        </h2>
+        <div className="work-flex">
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>01</h3>
+                <div>
+                  <h4>Student GPT</h4>
+                  <p>AI-powered Assistant</p>
+                </div>
+              </div>
+              <h4>Tools and features</h4>
+              <p>Node.js, Express.js, MongoDB, Gemini API, JWT, OTP Verification</p>
+            </div>
+            <WorkImage image={studentgpt} alt="Student GPT" />
+          </div>
+
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>02</h3>
+                <div>
+                  <h4>Talkify</h4>
+                  <p>Real-time Communication</p>
+                </div>
+              </div>
+              <h4>Tools and features</h4>
+              <p>WebSockets, Socket.io, Node.js, React, Glassmorphism UI</p>
+            </div>
+            <WorkImage image={talkify} alt="Talkify" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Work;
